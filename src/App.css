@@ -48,8 +48,8 @@ p {
 }
 
 
-.has-background-blue {
-    /*background: #36304a;*/
+.pagination {
+    display: inline-block;
 }
 
 img {

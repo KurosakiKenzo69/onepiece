@@ -20,6 +20,7 @@ export default function Header() {
                     <FontAwesomeIcon icon={faPlayCircle} />
                     Episodes
                 </Link>
+                <Link to={'/chapitres'}></Link>
                 <Link to="/arcs">
                     <FontAwesomeIcon icon={faDragon} />
                     Arcs
