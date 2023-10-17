@@ -34,6 +34,15 @@ svg {
 /*    gap: 5%;*/
 /*}*/
 
+.toggle {
+    position: relative;
+    top: -8px;
+}
+
+.toggle:hover {
+    background: transparent;
+}
+
 p {
     position: relative;
     left: 20px;

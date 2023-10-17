@@ -7,7 +7,7 @@ import 'bulma/css/bulma.min.css';
 const Chapters = () => {
     const [chapters, setChapters] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10; // Par exemple, afficher 10 chapitres par page
+    const itemsPerPage = 10;
 
     useEffect(() => {
         const fetchChapters = async () => {
