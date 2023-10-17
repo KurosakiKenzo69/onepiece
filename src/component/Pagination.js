@@ -39,7 +39,7 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
     };
 
     return (
-        <nav className="pagination is-centered" role="navigation" aria-label="pagination">
+        <nav className="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
             <ul className="pagination-list">
                 <li>
                     <button

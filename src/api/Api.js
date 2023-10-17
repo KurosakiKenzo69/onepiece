@@ -22,6 +22,16 @@ class OnePieceAPI {
         }
     }
 
+    async getArcs() {
+        try {
+            const response = await axios.get(`${this.URL}arcs`);
+            return response.data;
+        } catch (error) {
+            throw new Error(`Erreur lors de la récupération des arcs de One Piece : ${error}`);
+        }
+    }
+
+
 
 }
 
