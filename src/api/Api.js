@@ -2,7 +2,10 @@ import axios from "axios";
 
 class OnePieceAPI {
 
-    URL = "https://api.api-onepiece.com/";
+    constructor() {
+        this.URL = "https://api.api-onepiece.com/";
+
+    }
 
 
     async getChapters() {
@@ -31,8 +34,29 @@ class OnePieceAPI {
         }
     }
 
+    async getArcIdByTitle(arcTitle) {
+        try {
+            const response = await axios.get(`${this.URL}arcs`);
+            const arcs = response.data;
+            const arc = arcs.find((arc) => arc.arc_title === arcTitle);
+            if (arc) {
+                return arc.id;
+            } else {
+                throw new Error("Arc non trouvé");
+            }
+        } catch (error) {
+            throw new Error(`arc ID: ${error}`);
+        }
+    }
 
-
+    async getEpisodes() {
+        try {
+            const response = await axios.get(`${this.URL}episodes`);
+            return response.data;
+        } catch (error) {
+            throw new Error(`Error getting episodes : ${error}`);
+        }
+    }
 }
 
 export default OnePieceAPI;

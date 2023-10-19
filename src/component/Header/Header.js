@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route, Link} from "react-router-dom";
 import luffy from '../../img/luffy.jpg';
-import 'bulma/css/bulma.min.css';
+// import 'bulma/css/bulma.min.css';
 
 
 import '../../App.css';

@@ -26,7 +26,7 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
             pageNumbers.push(
                 <li key={i}>
                     <button
-                        className={`pagination-link ${i === currentPage ? 'is-current' : ''}`}
+                        className={`pagination-link is-clickable ${i === currentPage ? 'is-current' : ''}`}
                         aria-label={`Page ${i}`}
                         onClick={() => handlePageChange(i)}
                     >
@@ -39,11 +39,11 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
     };
 
     return (
-        <nav className="pagination is-centered is-rounded" role="navigation" aria-label="pagination">
+        <nav className="pagination is-centered is-rounded " role="navigation" aria-label="pagination">
             <ul className="pagination-list">
                 <li>
                     <button
-                        className="pagination-previous"
+                        className="pagination-previous is-clickable"
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
                     >
@@ -53,7 +53,7 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
                 {renderPageNumbers()}
                 <li>
                     <button
-                        className="pagination-next"
+                        className="pagination-next is-clickable"
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
                     >

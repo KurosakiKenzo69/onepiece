@@ -6,7 +6,7 @@ import Pagination from "../Pagination";
 const Arcs = () => {
     const [arcs, setArcs] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
+    const itemsPerPage = 20;
 
     useEffect(() => {
         const fetchArcs = async () => {
